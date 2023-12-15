@@ -14,7 +14,11 @@ export const getImagesBySubredditName = async (
     `https://www.reddit.com/r/${subredditName}/top.json`,
     {
       params: { limit: 100, include_over_18: true },
-      headers: { 'Content-Type': 'application/json; charset=UTF-8' },
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+        'User-Agent':
+          'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+      },
     },
   );
 
